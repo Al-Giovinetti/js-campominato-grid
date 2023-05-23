@@ -20,6 +20,7 @@ btnPlay.addEventListener("click",function(){
 
         cell.addEventListener("click",function(){
             cell.classList.toggle("cell-select")
+            numberCell.classList.toggle("border-white")
             console.log(numberCell)
         })
         bigGrid.appendChild(cell)
