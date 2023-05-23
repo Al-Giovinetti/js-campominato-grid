@@ -21,9 +21,22 @@ footer{
     height: 10vh
 }
 
-.appear{
-    height: 380px;
-    width: 380px;
+.big-grid{
+    height: 395px;
+    width: 395px;
     border: 2px solid black;
-    margin:auto
+    margin:auto;
+    display:flex;
+    flex-wrap: wrap;
 }
+
+.cell{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

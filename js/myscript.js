@@ -7,10 +7,21 @@ const btnPlay = document.querySelector("button");
 const clear=""
 
 btnPlay.addEventListener("click",function(){
-    let bigDivElement = getNewDivElement();
-    bigDivElement.classList.add("appear");
+    let bigGrid = getNewDivElement();
+    bigGrid.classList.add("big-grid");
 
-    mainElement.append(bigDivElement);
+    mainElement.append(bigGrid);
+
+    for(let i=0; i<100 ; i++){
+        const cell = getNewDivElement()
+        cell.classList.add("cell")
+        const numberCell = getNewDivElement()
+        numberCell.innerHTML=i
+        bigGrid.appendChild(cell)
+        cell.appendChild(numberCell)
+    }
+
+
 })
 
 
