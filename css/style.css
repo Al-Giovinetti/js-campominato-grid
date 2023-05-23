@@ -28,6 +28,7 @@ footer{
     margin:auto;
     display:flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .cell{
@@ -37,6 +38,10 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cell-select{
+    background-color: red;
 }
 
 

@@ -16,7 +16,12 @@ btnPlay.addEventListener("click",function(){
         const cell = getNewDivElement()
         cell.classList.add("cell")
         const numberCell = getNewDivElement()
-        numberCell.innerHTML=i
+        numberCell.innerHTML=i+1
+
+        cell.addEventListener("click",function(){
+            cell.classList.toggle("cell-select")
+            console.log(numberCell)
+        })
         bigGrid.appendChild(cell)
         cell.appendChild(numberCell)
     }
