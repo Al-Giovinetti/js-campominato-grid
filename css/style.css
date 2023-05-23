@@ -14,8 +14,9 @@ header{
 main{
     height: 75vh;
     background-color: aqua;
+    display: flex;
 }
 
 footer{
-    height: 10vh;
+    height: 10vh
 }
