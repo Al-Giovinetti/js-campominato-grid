@@ -1,6 +1,8 @@
 
 let mainElement = document.querySelector("main")
 
+let difficultChoice = document.getElementById("difficult")
+
 // Chiudo tutto in un event listened 
 const btnPlay = document.querySelector("button");
 
@@ -10,20 +12,48 @@ btnPlay.addEventListener("click",function(){
 
     mainElement.innerHTML=""
     mainElement.append(bigGrid);
-
-    for(let i=0; i<100 ; i++){
-        const cell = getNewDivElement()
-        cell.classList.add("cell")
-        const numberCell = getNewDivElement()
-        numberCell.innerHTML=i+1
-
-        cell.addEventListener("click",function(){
-            cell.classList.toggle("cell-select")
-            numberCell.classList.toggle("border-white")
-            console.log(numberCell)
-        })
-        bigGrid.appendChild(cell)
-        cell.appendChild(numberCell)
+    if (difficultChoice.value == 1){
+        for(let i=0; i<100 ; i++){
+            const cell = getNewDivElement()
+            cell.classList.add("cell")
+            const numberCell = getNewDivElement()
+            numberCell.innerHTML=i+1
+    
+            cell.addEventListener("click",function(){
+                cell.classList.toggle("cell-select")
+                console.log(numberCell)
+            })
+            bigGrid.appendChild(cell)
+            cell.appendChild(numberCell)
+        }
+    }else if(difficultChoice.value == 2){
+        for(let i=0; i< 81; i++){
+            const cell = getNewDivElement()
+            cell.classList.add("cell-2")
+            const numberCell = getNewDivElement()
+            numberCell.innerHTML=i+1
+    
+            cell.addEventListener("click",function(){
+                cell.classList.toggle("cell-select-2")
+                console.log(numberCell)
+            })
+            bigGrid.appendChild(cell)
+            cell.appendChild(numberCell)
+        }
+    }else{
+        for(let i=0; i< 49; i++){
+            const cell = getNewDivElement()
+            cell.classList.add("cell-3")
+            const numberCell = getNewDivElement()
+            numberCell.innerHTML=i+1
+    
+            cell.addEventListener("click",function(){
+                cell.classList.toggle("cell-select-3")
+                console.log(numberCell)
+            })
+            bigGrid.appendChild(cell)
+            cell.appendChild(numberCell)    
+        }
     }
 })
 

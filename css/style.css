@@ -58,13 +58,33 @@ footer{
 }
 
 .cell-select{
-    background-color: red;
+    background-color: yellow;
 }
 
-.border-white{
-    border: 1px solid white;
-    border-radius: 50%;
-    padding: 0.2rem;
+.cell-2{
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-select-2{
+    background-color: orangered;
+}
+
+.cell-3{
+    height: calc(100% / 7);
+    width: calc(100% / 7);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-select-3{
+    background-color: red;
 }
 
 
