@@ -12,6 +12,7 @@ btnPlay.addEventListener("click",function(){
 
     mainElement.innerHTML=""
     mainElement.append(bigGrid);
+
     if (difficultChoice.value == 1){
         for(let i=0; i<100 ; i++){
             const cell = getNewDivElement()
@@ -21,7 +22,7 @@ btnPlay.addEventListener("click",function(){
     
             cell.addEventListener("click",function(){
                 cell.classList.toggle("cell-select")
-                console.log(numberCell)
+                console.log("Hai selezionato la cella " + numberCell.innerHTML)
             })
             bigGrid.appendChild(cell)
             cell.appendChild(numberCell)
@@ -35,7 +36,7 @@ btnPlay.addEventListener("click",function(){
     
             cell.addEventListener("click",function(){
                 cell.classList.toggle("cell-select-2")
-                console.log(numberCell)
+                console.log("Hai selezionato la cella " + numberCell.innerHTML)
             })
             bigGrid.appendChild(cell)
             cell.appendChild(numberCell)
@@ -49,7 +50,7 @@ btnPlay.addEventListener("click",function(){
     
             cell.addEventListener("click",function(){
                 cell.classList.toggle("cell-select-3")
-                console.log(numberCell)
+                console.log("Hai selezionato la cella " + numberCell.innerHTML)
             })
             bigGrid.appendChild(cell)
             cell.appendChild(numberCell)    
